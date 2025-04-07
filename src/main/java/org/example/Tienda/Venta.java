@@ -24,10 +24,10 @@ public class Venta {
         this.fecha = java.time.LocalDate.now().toString();
     }
 
-    public static void guardarVentaEnJson(Venta venta, String ruta) {
-
+    public static void guardarVentaEnJson(Venta venta) {
         Gson gson = new Gson();
-        
+        String ruta = "src/main/java/org/example/Json/ventas.json";
+
         List<Venta> ventas = leerVentas(ruta);
         if (ventas == null) {
             ventas = new ArrayList<>();
@@ -36,7 +36,6 @@ public class Venta {
         ventas.add(venta);
 
         String json = gson.toJson(ventas);
-
         try (FileWriter writer = new FileWriter(ruta)) {
             writer.write(json);
             System.out.println("Venta guardada correctamente en el archivo.");
