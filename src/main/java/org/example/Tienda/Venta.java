@@ -8,6 +8,9 @@ import java.io.Reader;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.example.AdminCuenta.Cliente;
+import org.example.Dispositivos.Dispositivo;
+
 import com.google.gson.Gson;
 
 public class Venta {

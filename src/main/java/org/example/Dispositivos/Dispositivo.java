@@ -27,6 +27,11 @@ public abstract class Dispositivo{
     public int getStock() { return stock; }
     public abstract String especificaciones();
 
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
     @Override
     public String toString() {
         return marca + " " + modelo + " - $" + precio + " (" + stock + " en stock)";
