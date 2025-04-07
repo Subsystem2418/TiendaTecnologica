@@ -1,15 +1,14 @@
 package org.example;
 
+import java.util.Arrays;
+
 import org.example.AdminCuenta.Cliente;
 import org.example.Dispositivos.Dispositivo;
 import org.example.Dispositivos.Notebook;
 import org.example.Dispositivos.PC;
-import org.example.Dispositivos.Tablet;
 import org.example.Dispositivos.Pantalla;
+import org.example.Dispositivos.Tablet;
 import org.example.Tienda.Tienda;
-import org.example.Tienda.Venta;
-
-import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {

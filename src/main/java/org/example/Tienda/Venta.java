@@ -21,7 +21,7 @@ public class Venta {
     public Venta(Cliente cliente, Dispositivo dispositivo) {
         this.cliente = cliente;
         this.dispositivo = dispositivo;
-        this.fecha = java.time.LocalDate.now().toString(); // Fecha de la venta
+        this.fecha = java.time.LocalDate.now().toString();
     }
 
     public static void guardarVentaEnJson(Venta venta, String ruta) {

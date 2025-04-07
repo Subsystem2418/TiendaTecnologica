@@ -32,7 +32,7 @@ public class Tienda {
 
             dispositivo.setStock(dispositivo.getStock() - 1);
 
-            Venta.guardarVentaEnJson(venta, "src/main/java/org.example/Json/ventas.json");
+            Venta.guardarVentaEnJson(venta, "src/main/java/org/example/Json");
             return true;
         } else {
             System.out.println("Error: El dispositivo " + dispositivo.getModelo() + " está agotado.");
