@@ -3,6 +3,8 @@ package org.example;
 import java.util.Arrays;
 
 import org.example.AdminCuenta.Cliente;
+import org.example.AdminCuenta.Registro;
+import org.example.AdminCuenta.Login;
 import org.example.Dispositivos.Dispositivo;
 import org.example.Dispositivos.Notebook;
 import org.example.Dispositivos.PC;
@@ -13,6 +15,8 @@ import org.example.Tienda.Tienda;
 public class Main {
     public static void main(String[] args) {
         Cliente cliente1 = new Cliente("Juan", "Pérez", "juanperez@mail.com", "123456789", "Soltero", "Buenos Aires", "password123");
+        new Registro().registrarCliente(new Cliente("Juan", "Pérez", "juanperez@mail.com", "123456789", "Soltero", "Buenos Aires", "password123"));
+        new Login().iniciarSesion();
 
         Pantalla pantalla1 = new Pantalla("Samsung", "UHD", 2023);
         PC pc1 = new PC("Dell", "XPS 9000", 2024, 16, 512, "Intel i9", 1500.0, 10, "NVIDIA RTX 3080", "750W", "Torre", pantalla1);

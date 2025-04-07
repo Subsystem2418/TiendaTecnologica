@@ -83,5 +83,14 @@ public class Cliente {
                 ", ciudad='" + ciudad + '\'' +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Cliente cliente = (Cliente) obj;
+        return email.equals(cliente.email);
+    }
+
 }
 
