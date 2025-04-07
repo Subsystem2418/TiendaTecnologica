@@ -1,4 +1,4 @@
-package org.example;
+package org.example.AdminCuenta;
 
 public class Cliente {
     private String nombre;
@@ -7,15 +7,17 @@ public class Cliente {
     private String contacto;
     private String estadoCivil;
     private String ciudad;
+    private String contrasena;
 
     public Cliente(String nombre, String apellido, String email,
-                   String contacto, String estadoCivil, String ciudad) {
+                   String contacto, String estadoCivil, String ciudad, String contrasena) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
         this.contacto = contacto;
         this.estadoCivil = estadoCivil;
         this.ciudad = ciudad;
+        this.contrasena = contrasena;
     }
     public String getNombre() {
         return nombre;
@@ -29,15 +31,15 @@ public class Cliente {
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
-    public String getemail() {
+    public String getEmail() {
         return email;
     }
 
-    public void setemail(String email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
-    public String getcontacto() {
+    public String getContacto() {
         return contacto;
     }
 
@@ -59,6 +61,15 @@ public class Cliente {
 
     public void setCiudad(String ciudad) {
         this.ciudad = ciudad;
+    }
+
+    public String getContrasena() {return contrasena;}
+
+    public void setContrasena(String contrasena) {
+        if (contrasena.length() > 30) {
+            throw new IllegalArgumentException("La contraseña no puede superar los 30 caracteres.");
+        }
+        this.contrasena = contrasena;
     }
 
     @Override
