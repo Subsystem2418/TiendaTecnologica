@@ -29,7 +29,7 @@ public class Venta {
         String ruta = "src/main/java/org/example/Json/ventas.json";
     
         try (FileWriter writer = new FileWriter(ruta, true)) {
-            String json = gson.toJson(venta);
+            String json = gson.toJson(venta.toString());
             writer.write(json + System.lineSeparator());
             System.out.println("Venta guardada correctamente en el archivo.");
         } catch (IOException e) {
@@ -54,6 +54,10 @@ public class Venta {
 
     @Override
     public String toString() {
-        return "Venta [Cliente: " + cliente.getNombre() + ", Dispositivo: " + dispositivo.getModelo() + ", Fecha: " + fecha + "]";
+        return "Venta [Cliente: " + cliente.getNombre()+
+        ", Email: "+cliente.getEmail()+
+         ", Dispositivo: " + dispositivo.getModelo()+
+         ", Valor: "+ dispositivo.getPrecio()+
+          ", Fecha: " + fecha + "]";
     }
 }

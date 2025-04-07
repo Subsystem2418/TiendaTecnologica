@@ -22,6 +22,7 @@ public abstract class Dispositivo{
     }
 
     public String getMarca() { return marca; }
+    public double  getPrecio() { return precio; }
     public String getModelo() { return modelo; }
     public void descontarStock(int cantidad) { stock -= cantidad; }
     public int getStock() { return stock; }
